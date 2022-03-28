@@ -1,7 +1,7 @@
 1	chris
 2	rock
 3	got
-4	slapped
+4	hit
 5	by
 6	will
 7	smith
@@ -12,5 +12,5 @@
 11	making
 12	a
 13	mild
-14	joke
+14	jab
 15	haha
