@@ -6,11 +6,12 @@
 6	will
 7	smith
 8	at
+cat food
 9	the
 0	oscars
 10	for
 11	making
 12	a
-13	mild
+13	bald
 14	joke
 15	haha
