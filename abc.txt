@@ -6,11 +6,17 @@
 6	will
 7	smith
 8	at
+cat food
 9	the
 0	oscars
 10	for
 11	making
 12	a
+<<<<<<< HEAD
 13	mild
 14	jab
+=======
+13	bald
+14	joke
+>>>>>>> 9f47e018f8668d4d2ba27c208dc084274b046250
 15	haha
