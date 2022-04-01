@@ -14,4 +14,6 @@ cat food
 12	a
 13	bald
 14	jab
+13	bald
+14	jab
 15	haha
