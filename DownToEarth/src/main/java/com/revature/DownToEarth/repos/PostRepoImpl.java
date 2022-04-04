@@ -2,11 +2,13 @@ package com.revature.DownToEarth.repos;
 
 import com.revature.DownToEarth.models.Post;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Repository
 public class PostRepoImpl implements PostRepo{
     @PersistenceContext
     EntityManager em;

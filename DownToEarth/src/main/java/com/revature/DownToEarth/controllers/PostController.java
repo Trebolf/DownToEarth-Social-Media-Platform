@@ -24,6 +24,9 @@ public class PostController {
         return this.postService.getAllPosts();
     }
 
-    @GetMapping("{posttId}")
+    @GetMapping("{postId}")
+    public Post getPostById(@PathVariable Integer postId){
+        return this.postService.getPostById(postId);
+    }
 
 }

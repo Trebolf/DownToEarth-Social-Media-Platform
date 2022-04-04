@@ -27,7 +27,7 @@ public class Post {
     private Integer authorId;
 
     @Column
-    private Date posted;
+    private Date postedOn;
 
     @Column
     private Integer likeCount;

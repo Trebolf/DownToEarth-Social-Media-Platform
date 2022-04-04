@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75de34a4-8cc1-4871-9304-456e98614c0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Like.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applications.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/DownToEarthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/DownToEarthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/DownToEarth/DownToEarthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/revature/DownToEarth/DownToEarthApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h2/db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applications.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +65,35 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="DownToEarthApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="MAIN_CLASS_NAME" value="com.revature.DownToEarth.DownToEarthApplication" />
+      <module name="DownToEarth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.DownToEarth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DownToEarthApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,5 +116,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.revature.DownToEarth.repos;
 
 import com.revature.DownToEarth.models.Post;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
