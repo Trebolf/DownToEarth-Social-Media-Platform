@@ -19,9 +19,15 @@ public class Likes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer likesId;
 
-    @Column(nullable = false)
-    private Integer l_postId_fk;
+    @ManyToOne
+    @JoinColumn(name="l_postId_fk",
+            referencedColumnName = "postId",
+            nullable = false)
+    private Post post;
 
-    @Column(nullable = false)
-    private Integer l_userId_fk;
+    @ManyToOne
+    @JoinColumn(name="l_userId_fk",
+            referencedColumnName = "userId",
+            nullable = false)
+    private User user;
 }

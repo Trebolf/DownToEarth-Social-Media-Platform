@@ -3,6 +3,7 @@ package com.earth.DownToEarth.services;
 import com.earth.DownToEarth.models.Post;
 import com.earth.DownToEarth.models.User;
 import com.earth.DownToEarth.repositories.PostDAO;
+import com.earth.DownToEarth.repositories.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,14 @@ import java.util.List;
 @Transactional
 public class PostService {
 
-    @Autowired
     private PostDAO postDAO;
+    private UserDAO userDAO;
+
+    @Autowired
+    public PostService(PostDAO postDAO, UserDAO userDAO) {
+        this.postDAO = postDAO;
+        this.userDAO = userDAO;
+    }
 
     public List<Post> getAllPost() {
         return this.postDAO.getAllPost();
@@ -27,7 +34,11 @@ public class PostService {
     public Post createPost(Post post) {
         Integer postId = postDAO.createPost(post);
 
-        return postDAO.getOnePost(postId);
+        Post postFromDb = this.postDAO.getOnePost(postId);
+        User user = this.userDAO.getOneUser(postFromDb.getUser().getUserId());
+        postFromDb.setUser(user);
+
+        return postFromDb;
     }
 
     public Post getOnePost(Integer postId) {

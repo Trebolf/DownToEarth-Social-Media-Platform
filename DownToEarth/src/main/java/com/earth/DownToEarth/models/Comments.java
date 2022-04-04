@@ -29,9 +29,15 @@ public class Comments {
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date timeCommented;
 
-    @Column(nullable = false)
-    private Integer c_postId_fk;
+    @ManyToOne
+    @JoinColumn(name="c_postId_fk",
+            referencedColumnName = "postId",
+            nullable = false)
+    private Post post;
 
-    @Column(nullable = false)
-    private Integer c_userId_fk;
+    @ManyToOne
+    @JoinColumn(name="c_userId_fk",
+            referencedColumnName = "userId",
+            nullable = false)
+    private User user;
 }

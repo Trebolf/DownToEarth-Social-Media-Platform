@@ -38,9 +38,9 @@ public class Post {
     private Integer likesCount;
     //todo images
 
-    /*@ManyToOne
+    @ManyToOne
     @JoinColumn(name="p_userId_fk",
             referencedColumnName = "userId",
             nullable = false)
-    private User p_userId_fk;*/
+    private User user;
 }
