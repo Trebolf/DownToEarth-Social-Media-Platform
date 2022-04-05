@@ -21,9 +21,11 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;
 
+    //postText is title or entire post if there is no media attached
     @Column(nullable = false)
     private String postText;
 
+    //postMedia could represent a link to youtube/picture
     @Column
     private String postMedia;
 
@@ -34,9 +36,12 @@ public class Post {
     @CreationTimestamp
     private Date postedOn;
 
+    //this should just make the default likeCount 0, but
+    // it might override future likeCount
     @Column
     private Integer likeCount = 0;
 
+    //all comments are attached to post as list
     @OneToMany(mappedBy = "post")
     private List<Comment> comments = new ArrayList<>();
 
