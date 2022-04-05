@@ -1,34 +1,45 @@
 package com.earth.DownToEarth.models;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Date;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
+@ToString
+@Entity
+@Table(name="_posts")
 public class Post {
-    //IDs
-    private Integer postId;
-    private Integer likeId;
-    private Integer commentId;
 
-    //post content
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer postId;
+
+    @Column(insertable = false,
+            updatable = false,
+            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date timePosted;
+
+    @Column(nullable = false)
     private String postBody;
+
+    @Column(insertable = false,
+            columnDefinition = "INT DEFAULT 0")
     private Integer commentCount;
+
+    @Column(insertable = false,
+            columnDefinition = "INT DEFAULT 0")
     private Integer likesCount;
     //todo images
 
-    //comment content
-    private Date timeCommented;
-    private String commentBody;
-
-    //comment fk
-    private Integer c_postId_fk;
-    private Integer c_userId_fk;
-
-    //like fk
-    private Integer l_postId_fk;
-    private Integer l_userId_fk;
+    @ManyToOne
+    @JoinColumn(name="p_userId_fk",
+            referencedColumnName = "userId",
+            nullable = false)
+    private User user;
 }
