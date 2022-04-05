@@ -29,4 +29,9 @@ public class PostController {
         return this.postService.getPostById(postId);
     }
 
+    @DeleteMapping("{postId}")
+    public String removePost(@PathVariable Integer postId){
+        this.postService.removePost(postId);
+        return "post with id " + postId + " removed if exists";
+    }
 }

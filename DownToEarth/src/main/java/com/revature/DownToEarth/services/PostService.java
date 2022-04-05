@@ -29,4 +29,9 @@ public class PostService {
     public Post getPostById(Integer postId){
         return this.postRepo.getPostById(postId);
     }
+
+    public void removePost(Integer postId){
+        Post post = this.postRepo.getPostById(postId);
+        this.postRepo.removePost(post);
+    }
 }

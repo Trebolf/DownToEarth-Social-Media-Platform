@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75de34a4-8cc1-4871-9304-456e98614c0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/h2/db.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/PostRepoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applications.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
