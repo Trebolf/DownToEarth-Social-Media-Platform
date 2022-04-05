@@ -12,6 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
+
 @Entity
 @Table(name="_posts")
 public class Post {

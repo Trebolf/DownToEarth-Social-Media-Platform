@@ -1,6 +1,9 @@
 package com.earth.DownToEarth.models;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -8,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+
 @Entity
 @Table(name = "_users")
 public class User {
@@ -34,4 +37,17 @@ public class User {
 
     @Column(nullable = true)
     private String location;  //optional
+
+    @Override
+    public String toString() {
+        return "\n" + "User{" +
+                "userId=" + userId +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }
