@@ -1,38 +1,37 @@
 package com.earth.DownToEarth.services;
 
 import com.earth.DownToEarth.models.Post;
-import com.earth.DownToEarth.models.User;
-import com.earth.DownToEarth.repositories.PostDAO;
-import com.earth.DownToEarth.repositories.UserDAO;
+import com.earth.DownToEarth.repositories.PostRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-
 @Service
 @Transactional
 public class PostService {
-
-    private PostDAO postDAO;
-    private UserDAO userDAO;
+    private PostRepo postRepo;
 
     @Autowired
-    public PostService(PostDAO postDAO, UserDAO userDAO) {
-        this.postDAO = postDAO;
-        this.userDAO = userDAO;
+    public PostService(PostRepo postRepo){
+        this.postRepo= postRepo;
     }
 
-    public List<Post> getAllPostGivenUserId(Integer userId) {
-        return this.postDAO.getAllPostGivenUserId(userId);
+    public Post createPost(Post post) {
+        Integer postId = this.postRepo.createPost(post);
+        return this.postRepo.getPostById(postId);
     }
 
-    public Post getOnePost(Integer postId) {
-        return postDAO.getOnePost(postId);
+    public List<Post> getAllPosts() {
+        return this.postRepo.getAllPosts();
     }
 
-    public void deletePost(Integer postId) {
-        Post post = postDAO.getOnePost(postId);
-        postDAO.deletePost(post);
+    public Post getPostById(Integer postId){
+        return this.postRepo.getPostById(postId);
+    }
+
+    public void removePost(Integer postId){
+        Post post = this.postRepo.getPostById(postId);
+        this.postRepo.removePost(post);
     }
 }

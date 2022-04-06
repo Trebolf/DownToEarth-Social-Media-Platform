@@ -1,46 +1,49 @@
 package com.earth.DownToEarth.models;
 
-import com.sun.istack.NotNull;
+
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.util.Date;
-
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-
 @Entity
-@Table(name="_posts")
+@Table(name = "posts")
 public class Post {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;
 
-    @Column(insertable = false,
-            updatable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Date timePosted;
+    //postText is title or entire post if there is no media attached
+    @Column(nullable = false)
+    private String postText;
+
+    //postMedia could represent a link to youtube/picture
+    @Column
+    private String postMedia;
 
     @Column(nullable = false)
-    private String postBody;
+    private Integer authorId;
 
-    @Column(insertable = false,
-            columnDefinition = "INT DEFAULT 0")
-    private Integer commentCount;
+    @Column
+    @CreationTimestamp
+    private Date postedOn;
 
-    @Column(insertable = false,
-            columnDefinition = "INT DEFAULT 0")
-    private Integer likesCount;
-    //todo images
+    //this should just make the default likeCount 0, but
+    // it might override future likeCount
+    @Column
+    private Integer likeCount = 0;
 
-    @ManyToOne
-    @JoinColumn(name="p_userId_fk",
-            referencedColumnName = "userId",
-            nullable = false)
-    private User user;
+    //all comments are attached to post as list
+    @OneToMany(mappedBy = "post")
+    private List<Comment> comments = new ArrayList<>();
+
+
 }
