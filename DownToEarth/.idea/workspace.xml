@@ -77,11 +77,11 @@
   <component name="RunManager">
     <configuration name="DownToEarthApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
-      <option name="MAIN_CLASS_NAME" value="com.revature.DownToEarth.DownToEarthApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.earth.DownToEarth.DownToEarthApplication" />
       <module name="DownToEarth" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.revature.DownToEarth.*" />
+          <option name="PATTERN" value="com.earth.DownToEarth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
