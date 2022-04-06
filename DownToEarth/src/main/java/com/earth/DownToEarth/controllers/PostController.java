@@ -14,22 +14,28 @@ public class PostController {
     @Autowired //field injection
     private PostService postService;
 
+    @PostMapping
+    public Post createPost(@RequestBody Post post){
+        return postService.createPost(post);
+    }
+
+    @GetMapping
+    public List<Post> getAllPosts(){
+        return this.postService.getAllPosts();
+    }
 
     @GetMapping("{postId}")
-    public Post getOne(@PathVariable Integer postId) {
-        return postService.getOnePost(postId);
+    public Post getPostById(@PathVariable Integer postId){
+        return this.postService.getPostById(postId);
     }
 
     @DeleteMapping("{postId}")
-    public String deleteOne(@PathVariable Integer postId) {
-        postService.deletePost(postId);
-
-        return "Post at ID: " + postId + " was successfully deleted (if exists)";
+    public String removePost(@PathVariable Integer postId){
+        this.postService.removePost(postId);
+        return "post with id " + postId + " removed if exists";
     }
-
     @GetMapping("userId/{userId}")
     public List<Post> getAllPostGivenUserId(@PathVariable Integer userId) {
         return this.postService.getAllPostGivenUserId(userId);
     }
-
 }

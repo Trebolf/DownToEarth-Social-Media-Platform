@@ -47,4 +47,5 @@ public class UserDAOImp implements UserDAO{
                 .createQuery("from User where username = '" + username + "'", User.class) //need to wrap in single quote
                 .getSingleResult();
     }
+
 }

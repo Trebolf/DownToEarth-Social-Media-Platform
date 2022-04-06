@@ -28,7 +28,9 @@ public class Post {
 
     @Column(nullable = false)
     private String postBody;
-
+    //postMedia could represent a link to youtube/picture
+    @Column
+    private String postMedia;
     @Column(insertable = false,
             columnDefinition = "INT DEFAULT 0")
     private Integer commentCount;

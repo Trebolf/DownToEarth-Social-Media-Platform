@@ -15,6 +15,7 @@ public class UserService {
     @Autowired //field injection not recommended
     private UserDAO userDAO;
 
+
     public User getOne(Integer userId) {
         return userDAO.getOneUser(userId);
     }
