@@ -1,7 +1,7 @@
 1	chris
 2	rock
 3	got
-4	hit
+4	slapped
 5	by
 6	will
 7	smith
@@ -13,7 +13,5 @@ cat food
 11	making
 12	a
 13	bald
-14	jab
-13	bald
-14	jab
+14	joke
 15	haha
