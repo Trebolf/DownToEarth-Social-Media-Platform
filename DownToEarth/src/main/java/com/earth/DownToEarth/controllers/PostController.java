@@ -1,7 +1,7 @@
-package com.revature.DownToEarth.controllers;
+package com.earth.DownToEarth.controllers;
 
-import com.revature.DownToEarth.models.Post;
-import com.revature.DownToEarth.services.PostService;
+import com.earth.DownToEarth.models.Post;
+import com.earth.DownToEarth.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

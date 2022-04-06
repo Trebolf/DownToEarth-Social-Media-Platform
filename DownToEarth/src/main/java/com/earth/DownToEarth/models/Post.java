@@ -1,4 +1,4 @@
-package com.revature.DownToEarth.models;
+package com.earth.DownToEarth.models;
 
 
 import lombok.*;

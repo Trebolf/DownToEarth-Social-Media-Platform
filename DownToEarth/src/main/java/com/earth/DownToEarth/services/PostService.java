@@ -1,7 +1,7 @@
-package com.revature.DownToEarth.services;
+package com.earth.DownToEarth.services;
 
-import com.revature.DownToEarth.models.Post;
-import com.revature.DownToEarth.repos.PostRepo;
+import com.earth.DownToEarth.models.Post;
+import com.earth.DownToEarth.repositories.PostRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.revature.DownToEarth;
+package com.earth.DownToEarth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,7 @@
-package com.revature.DownToEarth.services;
+package com.earth.DownToEarth.services;
 
-import com.revature.DownToEarth.models.User;
-import com.revature.DownToEarth.repos.PostRepo;
-import com.revature.DownToEarth.repos.UserRepo;
+import com.earth.DownToEarth.models.User;
+import com.earth.DownToEarth.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
