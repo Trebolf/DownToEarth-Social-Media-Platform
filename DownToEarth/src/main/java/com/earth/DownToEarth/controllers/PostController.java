@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("post")
 public class PostController {
 
-    @Autowired
+    @Autowired //field injection
     private PostService postService;
 
     @PostMapping
