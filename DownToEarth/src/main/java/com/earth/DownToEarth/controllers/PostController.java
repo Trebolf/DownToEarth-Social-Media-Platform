@@ -11,31 +11,6 @@ import java.util.List;
 @RequestMapping("post")
 public class PostController {
 
-<<<<<<< HEAD
-    @Autowired
-    private PostService postService;
-
-    @PostMapping
-    public Post createPost(@RequestBody Post post){
-        return postService.createPost(post);
-    }
-
-    @GetMapping
-    public List<Post> getAllPosts(){
-        return this.postService.getAllPosts();
-    }
-
-    @GetMapping("{postId}")
-    public Post getPostById(@PathVariable Integer postId){
-        return this.postService.getPostById(postId);
-    }
-
-    @DeleteMapping("{postId}")
-    public String removePost(@PathVariable Integer postId){
-        this.postService.removePost(postId);
-        return "post with id " + postId + " removed if exists";
-    }
-=======
     @Autowired //field injection
     private PostService postService;
 
@@ -57,5 +32,4 @@ public class PostController {
         return this.postService.getAllPostGivenUserId(userId);
     }
 
->>>>>>> 99742ad7e2cbb88404d80854f7480aa8e0031860
 }

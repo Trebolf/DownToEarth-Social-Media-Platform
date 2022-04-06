@@ -4,8 +4,6 @@ package com.earth.DownToEarth.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,29 +12,21 @@ import java.util.Date;
 @ToString
 
 @Entity
-@Table(name="_comments")
-public class Comment {
+@Table(name="_likes")
+public class Likes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer commentId;
-
-    @Column(nullable = false)
-    private String commentBody;
-
-    @Column(insertable = false,
-            updatable = false,
-            columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Date timeCommented;
+    private Integer likesId;
 
     @ManyToOne
-    @JoinColumn(name="c_postId_fk",
+    @JoinColumn(name="l_postId_fk",
             referencedColumnName = "postId",
             nullable = false)
     private Post post;
 
     @ManyToOne
-    @JoinColumn(name="c_userId_fk",
+    @JoinColumn(name="l_userId_fk",
             referencedColumnName = "userId",
             nullable = false)
     private User user;
