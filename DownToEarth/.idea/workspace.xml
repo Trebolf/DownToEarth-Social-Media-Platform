@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75de34a4-8cc1-4871-9304-456e98614c0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/repos/UserRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h2/db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/h2/db.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/DownToEarthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/DownToEarthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/DownToEarth/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +79,11 @@
   <component name="RunManager">
     <configuration name="DownToEarthApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
-      <option name="MAIN_CLASS_NAME" value="com.revature.DownToEarth.DownToEarthApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.earth.DownToEarth.DownToEarthApplication" />
       <module name="DownToEarth" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.revature.DownToEarth.*" />
+          <option name="PATTERN" value="com.earth.DownToEarth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

@@ -1,4 +1,4 @@
-package com.revature.DownToEarth;
+package com.earth.DownToEarth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
