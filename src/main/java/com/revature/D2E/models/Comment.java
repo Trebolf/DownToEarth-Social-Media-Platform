@@ -2,6 +2,8 @@ package com.revature.D2E.models;
 
 
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -29,12 +31,14 @@ public class Comment {
     private Date timeCommented;
 
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="c_postId_fk",
             referencedColumnName = "postId",
             nullable = false)
     private Post post;
 
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="c_userId_fk",
             referencedColumnName = "userId",
             nullable = false)

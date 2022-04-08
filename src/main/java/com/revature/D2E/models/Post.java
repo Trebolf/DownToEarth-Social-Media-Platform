@@ -1,6 +1,8 @@
 package com.revature.D2E.models;
 
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -39,6 +41,7 @@ public class Post {
     private Integer likesCount;
 
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="p_userId_fk",
             referencedColumnName = "userId",
             nullable = false)
