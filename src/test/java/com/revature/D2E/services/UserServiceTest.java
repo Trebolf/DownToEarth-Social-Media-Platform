@@ -92,16 +92,10 @@ class UserServiceTest {
 
     @Test
     void deleteOne() {
-        User user = new User(
-                1,
-                "email",
-                "username",
-                "password",
-                "firstname",
-                "lastname",
-                "location");
+        Integer userId = 1;
+        User user = userService.getOne(userId);
 
-        userService.deleteOne(user.getUserId());
+        userService.deleteOne(userId);
 
         Mockito.verify(userDAO, Mockito.times(1)).deleteUser(user);
     }
