@@ -2,6 +2,7 @@ package com.revature.D2E.services;
 
 import com.revature.D2E.models.User;
 import com.revature.D2E.repos.UserDAO;
+import com.revature.D2E.repos.UserDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,10 @@ public class UserService {
 
     @Autowired
     private UserDAO userDAO;
+
+    public UserService(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
     public List<User> getAllUsers() {
         return userDAO.getAllUsers();
