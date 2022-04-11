@@ -5,6 +5,7 @@ import com.revature.D2E.models.Post;
 import com.revature.D2E.models.User;
 import com.revature.D2E.repos.PostDAO;
 import com.revature.D2E.repos.UserDAO;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -51,15 +52,22 @@ class PostServiceTest {
 
     @Test
     void createPost() {
-//        //arrange
-//        Date date = new Date(1L);
-//        User user = new User(1,"1","1","1","1","1","1");
-//        Post post = new Post(22,date,"hi","media",1,0,user);
-//
-//        //act
-//        postService.createPost(post);
-//        //assert
-//        Mockito.verify(postDAO).createPost(post);
+        //arrange
+        Date date = new Date(1L);
+        User user = new User(1,"1","1","1","1","1","1");
+        Post post = new Post(22,date,"hi","media",1,0,user);
+        Mockito.when(postDAO.createPost(post)).thenReturn(22);
+        Mockito.when(postDAO.getOnePost(post.getPostId())).thenReturn(post);
+
+
+//        Mockito.when(userDAO.getOneUser(user.getUserId())).thenReturn(user);
+        //act
+        Post actualResult = postService.createPost(post);
+
+
+
+        //assert
+        Assertions.assertEquals(post,actualResult);
     }
 
     @Test

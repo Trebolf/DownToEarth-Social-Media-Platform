@@ -34,11 +34,10 @@ public class PostService {
     public Post createPost(Post post) {
         Integer postId = postDAO.createPost(post);
 
-        Post postFromDb = this.postDAO.getOnePost(postId);
-        User user = this.userDAO.getOneUser(postFromDb.getUser().getUserId());
-        postFromDb.setUser(user);
+        return postDAO.getOnePost(postId);
+//        User user = this.userDAO.getOneUser(postFromDb.getUser().getUserId());
+//        postFromDb.setUser(user);
 
-        return postFromDb;
     }
 
     public Post getOnePost(Integer postId) {
