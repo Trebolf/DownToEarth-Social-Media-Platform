@@ -49,4 +49,13 @@ public class PostService {
         Post post = postDAO.getOnePost(postId);
         postDAO.deletePost(post);
     }
+
+    public Post updateCountsInPost(Integer postId, Integer postId_fk) {
+        Post post = postDAO.getOnePost(postId);
+
+        postDAO.updateLikesCount(postId, postId_fk);
+        postDAO.updateCommentsCount(postId, postId_fk);
+
+        return post;
+    }
 }

@@ -10,5 +10,7 @@ public interface PostDAO {
     Post getOnePost(Integer postId);
     Integer createPost(Post post);
     void deletePost(Post post);
+    void updateLikesCount(Integer postId, Integer postId_fk);
+    void updateCommentsCount(Integer postId, Integer postId_fk);
 
 }

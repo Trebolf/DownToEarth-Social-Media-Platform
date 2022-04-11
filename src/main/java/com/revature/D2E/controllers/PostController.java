@@ -41,4 +41,9 @@ public class PostController {
         return this.postService.getAllPostsGivenUserId(userId);
     }
 
+    @PatchMapping("{postId}/count/{postId_fk}")
+    public Post updateCountsInPost(@PathVariable Integer postId, @PathVariable Integer postId_fk) {
+        return this.postService.updateCountsInPost(postId, postId_fk);
+    }
+
 }
