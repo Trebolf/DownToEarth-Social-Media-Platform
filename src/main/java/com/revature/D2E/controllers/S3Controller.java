@@ -15,25 +15,23 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
-@RequestMapping("uploadfile")
+@RequestMapping("upload")
 public class S3Controller {
-//
-//    @Autowired
-//    private S3Service s3Service;
-//
-//    @PostMapping
-//    public String uploadFile(@RequestParam("file") MultipartFile file){
-//        String fileName = file.getOriginalFilename();
-//        String message = "";
-//        try {
-//            s3Service.uploadFile(fileName, file.getInputStream());
-//            message = "Your file has been uploaded successfully";
-//        } catch (Exception e) {
-//            message = "Error uploading file: " + e.getMessage();
-//        }
-//        return message;
-//    }
+
+    @Autowired
+    private S3Service s3Service;
+
+    @PostMapping
+    public ResponseEntity<Map<String, String>> uploadFile(@RequestParam("file") MultipartFile file) {
+        String publicURL = s3Service.uploadFile(file);
+        Map<String, String> response = new HashMap<>();
+        response.put("publicURL", publicURL);
+        return new ResponseEntity<Map<String, String>>(response, HttpStatus.CREATED);
+    }
+
 }
 

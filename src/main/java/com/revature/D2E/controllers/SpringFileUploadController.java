@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.awt.*;
 import java.io.File;
 
+/*
 @RequestMapping("upload")
 @RestController
 public class SpringFileUploadController {
@@ -38,4 +39,4 @@ public class SpringFileUploadController {
         return ResponseEntity.ok("File uploaded successfully.");
     }
 
-}
+}*/
