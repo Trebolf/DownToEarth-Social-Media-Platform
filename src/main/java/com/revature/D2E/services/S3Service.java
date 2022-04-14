@@ -35,13 +35,13 @@ public class S3Service implements FileService{
 
         //your bucket name is the first parameter inside s3client methods.
         try {
-            s3Client.putObject("fvw-bucket-s3-1", key, file.getInputStream(), metaData);
+            s3Client.putObject("crs3bucket", key, file.getInputStream(), metaData);
         } catch (IOException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An exception occurred while uploading the file.");
         }
 
-        s3Client.setObjectAcl("fvw-bucket-s3-1", key, CannedAccessControlList.PublicRead);
+        s3Client.setObjectAcl("crs3bucket", key, CannedAccessControlList.PublicRead);
 
-        return s3Client.getResourceUrl("fvw-bucket-s3-1", key);
+        return s3Client.getResourceUrl("crs3bucket", key);
     }
 }
