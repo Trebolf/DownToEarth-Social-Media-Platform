@@ -45,6 +45,18 @@ public class UserService {
         userDAO.deleteUser(user);
     }
 
+    public User validateCredentials(User user){
+        User userFromDb = this.userDAO.getOneUserByUsername(user.getUsername());
+
+        if(userFromDb == null) {
+            return null;
+        }else
+        if(!userFromDb.getPassword().equals(user.getPassword())) {
+            return null;
+        }else
+        return userFromDb;
+    }
+
     public User getOneUserByUsername(String username) {
         return userDAO.getOneUserByUsername(username);
     }
