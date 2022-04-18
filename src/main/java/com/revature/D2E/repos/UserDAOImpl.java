@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -55,8 +56,11 @@ public class UserDAOImpl implements UserDAO{
     public User getOneUserByUsername(String username) {
         Session session = em.unwrap(Session.class);
 
-        return session
-                .createQuery("from User where username = '" + username + "'", User.class)
-                .getSingleResult();
+        try{ return session
+               .createQuery("from User where username = '" + username + "'", User.class)
+                .getSingleResult();} catch (NoResultException nre){
+                    return null;
+                }
+
     }
 }

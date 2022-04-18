@@ -3,6 +3,7 @@ package com.revature.D2E.controllers;
 
 import com.revature.D2E.models.User;
 import com.revature.D2E.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,33 +17,37 @@ import javax.servlet.http.HttpSession;
 public class SessionController {
     private UserService userService;
 
-    //http://localhost:9000/session POST
-    @PostMapping
-    public ResponseEntity<User> login(HttpSession httpSession, @RequestBody User user){
-
-       User userFromDb = userService.validateCredentials(user);
-        httpSession.setAttribute("sessionVar", user);
-        return ResponseEntity.status(HttpStatus.OK).body(userFromDb);
+    @Autowired
+    public SessionController(UserService userService){
+        this.userService = userService;
     }
 
-    //http://localhost:9000/session DELETE
+    @PostMapping
+    public ResponseEntity<String> login(HttpSession httpSession, @RequestBody User user){
+        User currentUser = userService.validateCredentials(user.getUsername(), user.getPassword());
+
+        if (currentUser == null)
+            return ResponseEntity.ok("Invalid username or password");
+
+        httpSession.setAttribute("user", currentUser);
+        return ResponseEntity.ok("Signed in as user: " + user.getUsername());
+    }
+
     @DeleteMapping
     public ResponseEntity<String> logout(HttpSession httpSession){
 
-        httpSession.setAttribute("sessionVar", null);
+        httpSession.setAttribute("user", null);
         return ResponseEntity.status(HttpStatus.OK).body("logged out and session invalidated");
     }
 
-    //http://localhost:9000/session GET
     @GetMapping
     public ResponseEntity<User> checkSession(HttpSession httpSession){
-        User user = (User) httpSession.getAttribute("sessionVar");
+        User sessionUser = (User) httpSession.getAttribute("user");
 
-        if(user == null){
+        if(sessionUser == null){
             return ResponseEntity.status(HttpStatus.OK).body(null);
         }
-
-        return ResponseEntity.status(HttpStatus.OK).body(user);
+        return ResponseEntity.status(HttpStatus.OK).body(sessionUser);
 
     }
 

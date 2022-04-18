@@ -1,8 +1,10 @@
 package com.revature.D2E.services;
 
+import com.amazonaws.services.ec2.model.UserData;
 import com.revature.D2E.models.User;
 import com.revature.D2E.repos.UserDAO;
 import com.revature.D2E.repos.UserDAOImpl;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,16 +47,16 @@ public class UserService {
         userDAO.deleteUser(user);
     }
 
-    public User validateCredentials(User user){
-        User userFromDb = this.userDAO.getOneUserByUsername(user.getUsername());
+    public User validateCredentials(String username, String password){
+        User user = userDAO.getOneUserByUsername(username);
 
-        if(userFromDb == null) {
+        if(user == null)
             return null;
-        }else
-        if(!userFromDb.getPassword().equals(user.getPassword())) {
+
+        if(!password.equals(user.getPassword()))
             return null;
-        }else
-        return userFromDb;
+
+        return user;
     }
 
     public User getOneUserByUsername(String username) {
