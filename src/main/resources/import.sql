@@ -8,7 +8,13 @@ insert into users (email, username, password, firstname, lastname) values ('Holy
 -- Posts
 insert into posts (post_body, p_user_id_fk) values ('Tifa why do you do this to me', 1);
 
-insert into posts (post_body, p_user_id_fk) values ('You know what they say about big swords...', 1);
+insert into posts (post_body, p_user_id_fk) values ('Won 777 Gil from the Gold Saucer today, should I buy a cactpot ticket? Mother Materia blessed me today. Feeling lucky hehe', 1);
+
+insert into posts (post_body, post_media, p_user_id_fk) values ('When my Raise materia finally hits max level', 'https://fvw-bucket-s3-1.s3.amazonaws.com/59827e7c-7544-4574-a9d1-9538f08e1259.png', 1);
+
+insert into posts (post_body, p_user_id_fk) values ('Alright, who stole my recipe for the Cosmo Canyon?? I have Limit Break at the ready. Seventh Heaven coming for ya!', 2);
+
+insert into posts (post_body, post_media, p_user_id_fk) values ('The slums look gorgeous tonight!', 'https://pbs.twimg.com/media/EF5sZbtU0AAvjnD?format=jpg&name=900x900', 2);
 
 insert into posts (post_body, p_user_id_fk) values ('Cloud thinks he is someone else hehe xD', 2);
 
