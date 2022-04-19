@@ -20,6 +20,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("upload")
+@CrossOrigin(origins = {"http://localhost:4200"}, allowCredentials = "true")
 public class S3Controller {
 
     @Autowired
