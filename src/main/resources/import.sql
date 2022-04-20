@@ -23,6 +23,16 @@ insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Do what
 
 insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Stahp', 1, 1);
 
+insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Barrett says no to gambling', 2, 2);
+
+insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Marlene avert your eyes!', 2, 3);
+
+insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Raise? Why not Holy??', 3, 3);
+
+insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Watch out for Johnny this time of night', 5, 1);
+
+insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('What do you mean?', 6, 1);
+
 -- Likes
 insert into likes (l_post_id_fk, l_user_id_fk) values (1, 2);
 

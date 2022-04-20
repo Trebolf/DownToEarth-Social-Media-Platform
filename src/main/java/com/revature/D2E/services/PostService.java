@@ -32,12 +32,12 @@ public class PostService {
     }
 
     public Post createPost(Post post) {
+        User user = this.userDAO.getOneUser(post.getUser().getUserId());
+        post.setUser(user);
+
         Integer postId = postDAO.createPost(post);
 
         return postDAO.getOnePost(postId);
-//        User user = this.userDAO.getOneUser(postFromDb.getUser().getUserId());
-//        postFromDb.setUser(user);
-
     }
 
     public Post getOnePost(Integer postId) {
