@@ -15,11 +15,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class LikesServiceTest {
     private LikesService likesService;
     private PostService postService;
+    private UserService userService;
     private PostDAO postDAO = Mockito.mock(PostDAO.class);
     private LikesDAO likesDAO = Mockito.mock(LikesDAO.class);
+    private UserDAO userDAO = Mockito.mock(UserDAO.class);
 
     public LikesServiceTest() {
-        likesService = new LikesService(likesDAO, postDAO);
+        likesService = new LikesService(likesDAO, postDAO, userDAO);
     }
     @Test
     void createLikes() {

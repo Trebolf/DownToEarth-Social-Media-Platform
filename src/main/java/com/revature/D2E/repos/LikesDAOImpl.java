@@ -26,4 +26,11 @@ public class LikesDAOImpl implements LikesDAO{
 
         return session.get(Likes.class, likesId);
     }
+
+    @Override
+    public void deleteLike(Likes likes) {
+        Session session = em.unwrap(Session.class);
+
+        session.delete(likes);
+    }
 }

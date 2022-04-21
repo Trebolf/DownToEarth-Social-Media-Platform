@@ -23,4 +23,10 @@ public class LikesController {
         return likesService.getOneLike(likesId);
     }
 
+    @DeleteMapping("{likesId}")
+    public String deleteLike(@PathVariable Integer likesId) {
+        likesService.deleteLike(likesId);
+
+        return "Like at ID: " + likesId + " was successfully deleted (if exists)";
+    }
 }
