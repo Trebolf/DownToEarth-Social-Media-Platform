@@ -29,7 +29,8 @@ class UserServiceTest {
                 "password",
                 "firstname",
                 "lastname",
-                "location"
+                "location",
+                "profilePic"
                 ));
         expectedList.add(new User(
                 2,
@@ -38,7 +39,8 @@ class UserServiceTest {
                 "password",
                 "firstname",
                 "lastname",
-                "location"));
+                "location",
+                "profilePic"));
         Mockito.when(userDAO.getAllUsers()).thenReturn(expectedList);
 
         List<User> actualList = userService.getAllUsers();
@@ -56,7 +58,8 @@ class UserServiceTest {
                  "password",
                  "firstname",
                  "lastname",
-                 "location");
+                 "location",
+                 "profilePic");
 
          userService.createUser(user);
 
@@ -83,7 +86,8 @@ class UserServiceTest {
                 "password",
                 "firstname",
                 "lastname",
-                "location");
+                "location",
+                "profilePic");
 
         userService.updateOne(user);
 
@@ -109,7 +113,8 @@ class UserServiceTest {
                 "password",
                 "firstname",
                 "lastname",
-                "location"
+                "location",
+                "profilePic"
         );
         Mockito.when(userDAO.getOneUserByUsername(expectedOutput.getUsername())).thenReturn(expectedOutput);
 

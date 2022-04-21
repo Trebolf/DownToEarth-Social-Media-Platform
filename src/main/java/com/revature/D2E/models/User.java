@@ -39,7 +39,10 @@ public class User {
     private String lastname;
 
     @Column(nullable = true)
-    private String location;  //optional
+    private String location;
+
+    @Column(nullable = true)
+    private String profilePic;
 
     @Override
     public String toString() {
