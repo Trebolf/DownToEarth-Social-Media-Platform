@@ -25,7 +25,7 @@ class PostServiceTest {
     void getAllPosts() {
         //arrange
         Date date = new Date(1L);
-        User user = new User(1,"1","1","1","1","1","1");
+        User user = new User(1,"1","1","1","1","1","1","1");
         List<Post> expectedList = new ArrayList<>();
         expectedList.add( new Post(1,date,"hi","media",1,0,user));
         Mockito.when(postDAO.getAllPosts()).thenReturn(expectedList);
@@ -40,7 +40,7 @@ class PostServiceTest {
         //arrange
         Date date = new Date(1L);
         Integer userId = 1;
-        User user = new User(1,"1","1","1","1","1","1");
+        User user = new User(1,"1","1","1","1","1","1","1");
         List<Post> expectedList = new ArrayList<>();
         expectedList.add( new Post(1,date,"hi","media",1,0,user));
         Mockito.when(postDAO.getAllPostsGivenUserId(userId)).thenReturn(expectedList);
@@ -54,7 +54,7 @@ class PostServiceTest {
     void createPost() {
         //arrange
         Date date = new Date(1L);
-        User user = new User(1,"1","1","1","1","1","1");
+        User user = new User(1,"1","1","1","1","1","1","1");
         Post post = new Post(22,date,"hi","media",1,0,user);
         Mockito.when(postDAO.createPost(post)).thenReturn(22);
         Mockito.when(postDAO.getOnePost(post.getPostId())).thenReturn(post);
@@ -74,7 +74,7 @@ class PostServiceTest {
     void getOnePost() {
         //arrange
         Date date = new Date(1L);
-        User user = new User(1,"1","1","1","1","1","1");
+        User user = new User(1,"1","1","1","1","1","1","1");
         Post post = new Post(1,date,"hi","media",1,0,user);
         Mockito.when(postDAO.getOnePost(post.getPostId())).thenReturn(post);
         //act
