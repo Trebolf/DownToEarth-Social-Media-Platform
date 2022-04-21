@@ -34,8 +34,8 @@ insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Watch o
 insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('What do you mean?', 6, 1);
 
 -- Likes
-insert into likes (l_post_id_fk, l_user_id_fk) values (1, 2);
+insert into likes (like_to_post, l_user_id_fk) values (1, 2);
 
-insert into likes (l_post_id_fk, l_user_id_fk) values (1, 3);
+insert into likes (like_to_post, l_user_id_fk) values (1, 3);
 
-insert into likes (l_post_id_fk, l_user_id_fk) values (2, 3);
+insert into likes (like_to_post, l_user_id_fk) values (2, 3);

@@ -20,6 +20,13 @@ public class Likes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer likesId;
 
+    /*@ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name="l_postId_fk",
+            referencedColumnName = "postId",
+            nullable = false)
+    private Post post;*/
+
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name="l_postId_fk",
