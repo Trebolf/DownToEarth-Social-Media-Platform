@@ -24,11 +24,27 @@ export class RegisterComponent implements OnInit {
   file : File = <File>{};
   fileUrl : any;
   picture : boolean = false;
+  picExists : boolean = true;
   constructor(private service : ServiceService, private router : Router) { }
   
   createUser(username: string, password: string, email: string, firstname: string, lastname: string, location: string, profilePic: string){
+    let formData: FormData = new FormData();
+    formData.append('file', this.file);
+    console.log(formData);
+    this.service.upload(formData).subscribe(responseBody => {
+  
+    this.profilePic = responseBody;
+    console.log(responseBody);
+    const picObj = JSON.stringify(responseBody);
     
-    this.service.createUser(this.username, this.password, this.email, this.firstname, this.lastname, this.location, "https://crs3bucket.s3.amazonaws.com/b384c649-f5ef-481c-84e3-f55464c0ddbd.jpg").subscribe(responseBody => {
+    JSON.parse(picObj, (key,value) => {
+      typeof value === 'string'
+      console.log(key);
+      console.log(value);
+
+    
+  
+    this.service.createUser(this.username, this.password, this.email, this.firstname, this.lastname, this.location, value).subscribe(responseBody => {
       this.username="";
       this.password="";
       this.email="";
@@ -38,7 +54,8 @@ export class RegisterComponent implements OnInit {
       this.profilePic="";
       this.users.push(responseBody);
     })
-
+})
+})
     console.log({
       "username": username,
       "password": password,
@@ -55,12 +72,15 @@ export class RegisterComponent implements OnInit {
   addFile(e : any)
   {
       this.file = e.target.files[0];
-      this.picture = true;
+      console.log(this.file);
+      this.picExists = true;
       let reader = new FileReader();
       reader.readAsDataURL(e.target.files[0])
       reader.onload = (_e) =>
       {
         this.fileUrl = reader.result;
       }
+      this.service.upload(e.target.files[0])
+      console.log(e.target.files[0])
   }
 }
