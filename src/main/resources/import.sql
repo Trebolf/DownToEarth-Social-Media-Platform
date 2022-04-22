@@ -1,9 +1,9 @@
 -- Users
-insert into users (email, username, password, firstname, lastname) values ('Cloud7@email.com', 'Cloud', 'pass1', 'Cloud', 'Strife');
+insert into users (email, username, password, firstname, lastname, profile_pic) values ('Cloud7@email.com', 'Cloud', 'pass1', 'Cloud', 'Strife', 'https://fvw-bucket-s3-1.s3.amazonaws.com/05ae1b80-ce3f-4d5f-9cde-803be5b4d8a1.jpg');
 
-insert into users (email, username, password, firstname, lastname, location) values ('Tifa7@email.com', 'Seventh', 'pass1', 'Tifa', 'Lockhart', 'Niblheim');
+insert into users (email, username, password, firstname, lastname, profile_pic, location) values ('Tifa7@email.com', 'Seventh', 'pass1', 'Tifa', 'Lockhart', 'https://fvw-bucket-s3-1.s3.amazonaws.com/1d9a9371-3d5a-4aed-88eb-6bd018cf2d43.jpg', 'Niblheim');
 
-insert into users (email, username, password, firstname, lastname) values ('Holy@email.com', 'HolyMat', 'pass1', 'Aerith', 'Gainsborough');
+insert into users (email, username, password, firstname, lastname, profile_pic) values ('Holy@email.com', 'HolyMat', 'pass1', 'Aerith', 'Gainsborough', 'https://fvw-bucket-s3-1.s3.amazonaws.com/a0673b8a-a363-4748-95a1-54192eddcd0d.jpg');
 
 -- Posts
 insert into posts (post_body, p_user_id_fk) values ('Tifa why do you do this to me', 1);
