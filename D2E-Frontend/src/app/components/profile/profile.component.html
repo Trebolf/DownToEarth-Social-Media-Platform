@@ -4,10 +4,10 @@
     <form method="post" class="post-container">
         <div class="profile-picture">
             <div class="profile-img">
-                <img src="" alt=""/>
+                <img [src]="picExists ? fileUrl : postMedia" alt="Post Media" id="postMedia">
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
-                            <input type="file" name="file"/>
+                            <input type="file" (change)="addFile($event)" name="file"/>
                     </div>
             </div>
         </div>

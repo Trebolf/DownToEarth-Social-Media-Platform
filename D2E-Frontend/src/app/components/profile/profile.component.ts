@@ -14,12 +14,18 @@ export class ProfileComponent implements OnInit {
   postList : Array<Post> = [];
   post : Post = <Post>{};
   comments : Comment = <Comment>{};
+  postMedia : string = "";
 
   like: Like = <Like>{};
   likeList : Array<Like> = [];
   user : User = <User>{};
   likeGem : boolean = true;
   likeGemVisibility : boolean = true;
+
+  file : File = <File>{};
+  fileUrl : any;
+  picUrl : string = "";
+  picExists : boolean = true;
 
   constructor(private service : ServiceService) { }
 
@@ -121,6 +127,21 @@ export class ProfileComponent implements OnInit {
 
       this.service.deleteLike(this.like.likesId).subscribe()
     })
+  }
+
+  addFile(e : any)
+  {
+      this.file = e.target.files[0];
+      console.log(this.file);
+      this.picExists = true;
+      let reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0])
+      reader.onload = (_e) =>
+      {
+        this.fileUrl = reader.result;
+      }
+      this.service.upload(e.target.files[0])
+      console.log(e.target.files[0])
   }
 
   // updateLikeCount() {
