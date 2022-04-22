@@ -139,8 +139,11 @@ export class ServiceService {
       withCredentials: true
     })
   }
+
   upload(image: FormData){
     console.log(image);
     return this.httpCli.post<any>(`${environment.domain}/upload`,image)
   }
+
+  
 }
