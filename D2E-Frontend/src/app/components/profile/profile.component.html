@@ -1,23 +1,21 @@
 
 
 <div class="profile-container">
+    <div class="profile-name">
+        <div class="register-tab">{{this.user.username}}</div>
+        
+    </div>
     <form method="post" class="profile-form-container">
+        
+    
+        
         <div class="profile-picture">
             <div class="profile-img">
                 <img [src]=this.user.profilePic alt="Profile Pic" id="profilePic">
-                    <div class="file btn btn-lg btn-primary">
-                        Change Photo
-                            <input type="file" (change)="addFile($event)" name="file"/>
-                    </div>
             </div>
         </div>
-    <div>
-        <div class="profile-name">
-            <h3>
-                {{this.user.username}}
-            </h3>
-        </div>
-    </div>
+    
+        
         <div>
             <input type="submit" class="profile-edit-btn" value="Edit Profile" (click)="toggleEdit()"/>
         </div>
@@ -33,7 +31,7 @@
                         </div>
 
                             <div class="column-text">
-                                <p>{{this.user.firstName}} {{this.user.lastName}}</p>
+                                <p #el [attr.contenteditable]="contenteditable">{{this.user.firstName}} {{this.user.lastName}}</p>
 
                             </div>
                                 <div class="column-title">
@@ -41,7 +39,7 @@
                                 </div>
 
                                     <div class="column-text">
-                                        <p>{{this.user.email}}</p>
+                                        <p #el [attr.contenteditable]="contenteditable">{{this.user.email}}</p>
 
                                     </div>
                                         <div class="column-title">
@@ -49,7 +47,7 @@
                                         </div>
 
                                             <div class="column-text">
-                                                <p>{{this.user.location}}</p>
+                                                <p #el [attr.contenteditable]="contenteditable">{{this.user.location}}</p>
 
                                             </div>
 
