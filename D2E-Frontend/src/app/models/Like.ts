@@ -14,8 +14,8 @@ export interface Like{
             email : string;
             username : string;
             password : string;
-            firstName : string;
-            lastName : string;
+            firstname : string;
+            lastname : string;
             location : string;
         }
     }
@@ -25,8 +25,8 @@ export interface Like{
         email : string;
         username : string;
         password : string;
-        firstName : string;
-        lastName : string;
+        firstname : string;
+        lastname : string;
         location : string;
     }
 }

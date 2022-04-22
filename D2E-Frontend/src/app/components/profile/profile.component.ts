@@ -43,7 +43,7 @@ export class ProfileComponent implements OnInit {
   checkSession(){
     this.service.checkSession().subscribe(responseBody => {
       this.user = responseBody;
-      console.log(this.user.userId);
+      console.log(this.user);
     })
   }
   getAllPostGivenUserId() {
