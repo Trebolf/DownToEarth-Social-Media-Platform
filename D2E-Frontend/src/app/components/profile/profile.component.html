@@ -4,7 +4,7 @@
     <form method="post" class="post-container">
         <div class="profile-picture">
             <div class="profile-img">
-                <img [src]="picExists ? fileUrl : postMedia" alt="Post Media" id="postMedia">
+                <img [src]=this.user.profilePic alt="Post Media" id="postMedia">
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                             <input type="file" (change)="addFile($event)" name="file"/>
@@ -14,7 +14,7 @@
     <div>
         <div class="profile-name">
             <h3>
-                Cloud Strife
+                {{this.user.username}}
             </h3>
         </div>
     </div>
@@ -26,25 +26,25 @@
                     <label>Username</label>
                 </div>
                     <div class="column-text">
-                        <p>Cloud</p>
+                        <p>{{this.user.username}}</p>
                     </div>
                         <div class="column-title">
                             <label>Name</label>
                         </div>
                             <div class="column-text">
-                                <p>Cloud Strife</p>
+                                <p>{{this.user.firstName}} {{this.user.lastName}}</p>
                             </div>
                                 <div class="column-title">
                                     <label>Email</label>
                                 </div>
                                     <div class="column-text">
-                                        <p>cloud7@gmail.com</p>
+                                        <p>{{this.user.email}}</p>
                                     </div>
                                         <div class="column-title">
                                             <label>Location</label>
                                         </div>
                                             <div class="column-text">
-                                                <p>null</p>
+                                                <p>{{this.user.location}}</p>
                                             </div>
 
             </div>

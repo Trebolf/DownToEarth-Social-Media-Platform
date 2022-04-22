@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
   comments : Comment = <Comment>{};
   postMedia : string = "";
 
+
   like: Like = <Like>{};
   likeList : Array<Like> = [];
   user : User = <User>{};
