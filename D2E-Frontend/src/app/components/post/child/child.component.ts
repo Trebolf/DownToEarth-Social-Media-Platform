@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Comment } from 'src/app/models/Comment';
+import { Post } from 'src/app/models/Post';
 import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
@@ -12,11 +13,12 @@ export class ChildComponent implements OnInit {
   commentList : Array<Comment> = [];
   comments : Comment = <Comment>{};
   comment : Comment = <Comment>{};
+  post : Post = <Post>{};
 
   constructor(private service : ServiceService) { }
 
   ngOnInit(): void {
-    //this.getAllCommentsbyPostId();
+    // this.getAllCommentsbyPostId(this.post.postId);
     this.getAllCommentsByPostId2();
     /* this.getOneComment(); */
   }
@@ -28,11 +30,17 @@ export class ChildComponent implements OnInit {
     });
   } */
 
-  getAllCommentsbyPostId() {
-    this.service.getAllCommentsByPostId().subscribe(responseBody => {
-      this.comments = responseBody.data;
-      console.log(responseBody);
-    });
+  getAllCommentsbyPostId(postId : number) {
+
+    this.service.getOnePostById(postId).subscribe(postToComment => {
+      this.post = postToComment;
+      console.log(this.post)
+
+      this.service.getAllCommentsByPostId().subscribe(responseBody => {
+        this.comments = responseBody.data;
+        console.log(responseBody);
+      });
+    })
   }
 
   getAllCommentsByPostId2() {

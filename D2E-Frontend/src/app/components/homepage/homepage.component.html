@@ -10,8 +10,10 @@
         
         <div>
             Upload Picture:
-            <input type="file" (change)="addFile($event)" id="fileInput"/>
-            <img [src]="picExists ? fileUrl : postMedia" alt="Post Media" id="postMedia">
+            <input type="file" (change)="addFile($event)" class="file-input"/>
+            <div class="img-container">
+                <img [src]="picExists ? fileUrl : postMedia" class="post-media">
+            </div>
         </div>
     </form>
         <div class="button-container">

@@ -16,7 +16,7 @@ insert into posts (post_body, p_user_id_fk) values ('Alright, who stole my recip
 
 insert into posts (post_body, post_media, p_user_id_fk) values ('The slums look gorgeous tonight!', 'https://pbs.twimg.com/media/EF5sZbtU0AAvjnD?format=jpg&name=900x900', 2);
 
-insert into posts (post_body, p_user_id_fk) values ('Cloud thinks he is someone else hehe xD', 2);
+insert into posts (post_body, post_media, p_user_id_fk) values ('Me waiting for LB3 when everyone else is on the ground.', 'https://fvw-bucket-s3-1.s3.amazonaws.com/8f81db6a-cd90-4b94-8676-55e96e99ddc1.gif', 3);
 
 -- Comments
 insert into comments (comment_body, c_post_id_fk, c_user_id_fk) values ('Do what hehe', 1, 2);

@@ -46,6 +46,45 @@
     overflow-wrap: break-word;
 }
 
+.file-input{
+    padding: 4px;
+}
+
+::-webkit-file-upload-button {
+    background-color:#4f7834;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+::-webkit-file-upload-button:hover {
+    bottom: 1px;
+    background-color:#5c8640;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button:active {
+    top: 1px;
+    background-color: #4f7834;
+    -webkit-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+}
+
+.img-container {
+    width: 100%;
+    height: auto;
+}
+
+.post-media {
+    width: 100%;
+    height: auto;
+}
+
 .button-container{
     display: flex;
 }

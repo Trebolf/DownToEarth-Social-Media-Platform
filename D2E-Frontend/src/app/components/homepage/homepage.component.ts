@@ -84,6 +84,7 @@ export class HomepageComponent implements OnInit, DoCheck {
     })
   })
   }
+
   addFile(e : any)
   {
       this.file = e.target.files[0];
