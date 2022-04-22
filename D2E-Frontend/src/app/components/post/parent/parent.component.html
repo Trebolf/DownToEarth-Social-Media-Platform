@@ -2,7 +2,7 @@
 
 
 <div class="post-container">
-    <div *ngFor="let obj of postList" class="post">
+    <div *ngFor="let obj of postList.reverse()" class="post">
         <div class="post-tab">{{obj?.user?.username}}</div>
         <div *ngIf="this.post" class="post-card" id="{{obj.postId}}">
             <p class="post-body">{{obj.postBody}}</p>
