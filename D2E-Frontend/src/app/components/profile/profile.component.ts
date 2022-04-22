@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { elementAt } from 'rxjs';
 import { Like } from 'src/app/models/Like';
 import { Post } from 'src/app/models/Post';
 import { User } from 'src/app/models/User';
@@ -26,6 +27,8 @@ export class ProfileComponent implements OnInit {
   fileUrl : any;
   picUrl : string = "";
   picExists : boolean = true;
+
+  contenteditable: boolean = false;
 
   constructor(private service : ServiceService) { }
 
@@ -150,6 +153,9 @@ export class ProfileComponent implements OnInit {
   //     this.post.likesCount = responseBody.likesCount;
   //   })
   // }
+
+  toggleEdit(){
+    this.contenteditable = !this.contenteditable;
+  }
+
 }
-
-

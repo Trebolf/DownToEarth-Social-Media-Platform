@@ -4,7 +4,7 @@
     <form method="post" class="post-container">
         <div class="profile-picture">
             <div class="profile-img">
-                <img [src]="picExists ? fileUrl : postMedia" alt="Post Media" id="postMedia">
+                <img [src]="picExists ? fileUrl : postMedia" alt="Profile Picture" id="postMedia">
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                             <input type="file" (change)="addFile($event)" name="file"/>
@@ -19,7 +19,7 @@
         </div>
     </div>
         <div>
-            <input type="submit" class="profile-edit-btn" value="Edit Profile"/>
+            <input type="submit" class="profile-edit-btn" value="Edit Profile" (click)="toggleEdit()"/>
         </div>
             <div class="form-info">
                 <div class="column-title">
@@ -31,19 +31,19 @@
                         <div class="column-title">
                             <label>Name</label>
                         </div>
-                            <div class="column-text">
+                            <div class="column-text" #el [attr.contenteditable]="contenteditable">
                                 <p>Cloud Strife</p>
                             </div>
                                 <div class="column-title">
                                     <label>Email</label>
                                 </div>
-                                    <div class="column-text">
+                                    <div class="column-text" #el [attr.contenteditable]="contenteditable">
                                         <p>cloud7@gmail.com</p>
                                     </div>
                                         <div class="column-title">
                                             <label>Location</label>
                                         </div>
-                                            <div class="column-text">
+                                            <div class="column-text" #el [attr.contenteditable]="contenteditable">
                                                 <p>null</p>
                                             </div>
 
