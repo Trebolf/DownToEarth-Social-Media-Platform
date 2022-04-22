@@ -19,7 +19,7 @@
         </div>
     </div>
         <div>
-            <input type="submit" class="profile-edit-btn" value="Edit Profile"/>
+            <input type="submit" class="profile-edit-btn" value="Edit Profile" (click)="toggleEdit()"/>
         </div>
             <div class="form-info">
                 <div class="column-title">
@@ -31,20 +31,26 @@
                         <div class="column-title">
                             <label>Name</label>
                         </div>
+
                             <div class="column-text">
                                 <p>{{this.user.firstName}} {{this.user.lastName}}</p>
+
                             </div>
                                 <div class="column-title">
                                     <label>Email</label>
                                 </div>
+
                                     <div class="column-text">
                                         <p>{{this.user.email}}</p>
+
                                     </div>
                                         <div class="column-title">
                                             <label>Location</label>
                                         </div>
+
                                             <div class="column-text">
                                                 <p>{{this.user.location}}</p>
+
                                             </div>
 
             </div>
