@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @Transactional
@@ -36,6 +37,10 @@ public class LikesService {
         Integer likesId = likesDAO.createLikes(likes);
 
         return likesDAO.getOneLike(likesId);
+    }
+
+    public List<Likes> getAllLikes() {
+        return likesDAO.getAllLikes();
     }
 
     public Likes getOneLike(Integer likesId) {

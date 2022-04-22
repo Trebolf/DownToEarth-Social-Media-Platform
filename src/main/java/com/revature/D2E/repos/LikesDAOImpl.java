@@ -1,11 +1,13 @@
 package com.revature.D2E.repos;
 
 import com.revature.D2E.models.Likes;
+import com.revature.D2E.models.Post;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Repository
 public class LikesDAOImpl implements LikesDAO{
@@ -18,6 +20,15 @@ public class LikesDAOImpl implements LikesDAO{
         Session session = em.unwrap(Session.class);
 
         return (Integer) session.save(likes);
+    }
+
+    @Override
+    public List<Likes> getAllLikes() {
+        Session session = em.unwrap(Session.class);
+
+        return session
+                .createQuery("from Likes", Likes.class)
+                .getResultList();
     }
 
     @Override

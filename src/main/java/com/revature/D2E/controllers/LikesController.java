@@ -5,6 +5,8 @@ import com.revature.D2E.services.LikesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("likes")
 @CrossOrigin(origins = {"http://localhost:4200"}, allowCredentials = "true")
@@ -16,6 +18,11 @@ public class LikesController {
     @PostMapping
     public Likes createLikes(@RequestBody Likes likes) {
         return likesService.createLikes(likes);
+    }
+
+    @GetMapping
+    public List<Likes> getAllLikes() {
+        return likesService.getAllLikes();
     }
 
     @GetMapping("{likesId}")
