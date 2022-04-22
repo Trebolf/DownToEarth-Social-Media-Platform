@@ -1,0 +1,24 @@
+
+
+
+
+<div class="home-container">
+    <div class="create-post-header">Create New Post</div>
+    <div class="create-post-card">
+        <form class="create-post-form" (submit)="createPost()">
+            <textarea class="create-post-input" type="text" [(ngModel)]="post.postBody" name="postBody" required></textarea>
+        
+        <div>
+            Upload Picture:
+            <input type="file" (change)="addFile($event)" class="file-input"/>
+            <div class="img-container">
+                <img [src]="picExists ? fileUrl : postMedia" class="post-media">
+            </div>
+        </div>
+    </form>
+        <div class="button-container">
+            <button class="create-post-button" (click)="createPost()">Submit</button>
+        </div>
+    </div>
+    <app-parent [user]="user"></app-parent>
+</div>

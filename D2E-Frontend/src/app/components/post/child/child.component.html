@@ -1,0 +1,21 @@
+
+
+
+<div *ngFor="let obj of this.commentList">
+    <div class="comment-head">{{obj.user?.username}}</div>
+    <div class="comment-card">
+        <p class="comment-body">{{obj.commentBody}}</p>
+        <div class="comment-status">
+            <div class="comment-time-submitted">{{obj?.timeCommented | date}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="create-comment-container">
+    <div class="create-comment">
+        <textarea class="create-comment-input" type="text" [(ngModel)]="comment.commentBody" name="postBody" required></textarea>
+    </div>
+    <div class="button-container">
+        <button class="create-comment-button" (click)="createComment($event)">Submit</button>
+    </div>
+</div>

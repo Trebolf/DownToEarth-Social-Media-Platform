@@ -1,0 +1,85 @@
+
+
+<div class="profile-container">
+    <div class="profile-name">
+        <div class="register-tab">{{this.user.username}}</div>
+        
+    </div>
+    <form method="post" class="profile-form-container">
+        
+    
+        
+        <div class="profile-picture">
+            <div class="profile-img">
+                <img [src]=this.user.profilePic alt="Profile Pic" id="profilePic">
+            </div>
+        </div>
+    
+        
+        <div>
+            <input type="submit" class="profile-edit-btn" value="Edit Profile" (click)="toggleEdit()"/>
+        </div>
+            <div class="form-info">
+                <div class="column-title">
+                    <label>Username</label>
+                </div>
+                    <div class="column-text">
+                        <p>{{this.user.username}}</p>
+                    </div>
+                        <div class="column-title">
+                            <label>Name</label>
+                        </div>
+
+                            <div class="column-text">
+                                <p #el [attr.contenteditable]="contenteditable">{{this.user.firstname}} {{this.user.lastname}}</p>
+                            </div>
+                                <div class="column-title">
+                                    <label>Email</label>
+                                </div>
+
+                                    <div class="column-text">
+                                        <p #el [attr.contenteditable]="contenteditable">{{this.user.email}}</p>
+
+                                    </div>
+                                        <div class="column-title">
+                                            <label>Location</label>
+                                        </div>
+
+                                            <div class="column-text">
+                                                <p #el [attr.contenteditable]="contenteditable">{{this.user.location}}</p>
+
+                                            </div>
+
+            </div>
+    </form>
+</div>
+    <div class="post-container">
+        <div *ngFor="let obj of postList" class="post">
+            <div class="post-tab">{{obj?.user?.username}}</div>
+            <div *ngIf="this.post" class="post-card" id="{{obj.postId}}">
+                <p class="post-body">{{obj.postBody}}</p>
+                <img class="post-media" src="{{obj.postMedia}}">
+                <div class="post-status">
+                    <div *ngIf="likeGem">
+                        <img src="../../../../assets/images/gemgrey.png" 
+                        [id]="obj.postId" 
+                        class="gem-img" 
+                        alt="background image" 
+                        (click)="createLike(obj.postId)">
+                    </div>
+                    <div *ngIf="!likeGem">
+                        <img src="../../../../assets/images/gem.png" 
+                        [id]="obj.postId" 
+                        class="gem-img" 
+                        alt="background image" 
+                        (click)="deleteLike2()">
+                    </div>
+                    <div class="post-gem-count">{{obj.likesCount}}</div>
+                    <div class="post-time-submitted">{{obj.timePosted | date}}</div>
+                </div>
+                <div class="comment-container">
+                    <app-child></app-child>
+                </div>
+            </div>
+        </div>
+    </div>
