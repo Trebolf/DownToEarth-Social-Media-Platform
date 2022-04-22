@@ -1,0 +1,186 @@
+
+/* whole page */
+.profile-container{
+    padding: 10%;
+    border-radius: 0.5rem;
+    height: 100vh;
+    background-color:#393939;
+}
+
+/* profile box */
+.post-container{
+    background: #938863;
+    height: 65vh;
+    width: 70vw;
+    margin-top: -80px;
+    border-radius: 12px;
+    border-width: 10px;
+    margin-left: 100px;
+}
+
+/* profile picture */
+.profile-picture{
+    display: flex;
+    text-align: center;
+}
+
+
+/* profile picture 1/2 */
+.profile-img img{
+    width: 100%;
+    height: 125%;
+    margin-top: 25px;
+    margin-left: 45px;
+}
+
+/* "change photo box" 2/2 */
+.profile-img .file {
+    position: relative;
+    margin-left: 45px;
+    overflow: hidden;
+    margin-top: 15%;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #141107;
+}
+
+/* picture itself */
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+/* profile name  >>>>FIX<<<< */
+h3{
+    color: #0c3808;
+    font-weight: 800;
+    display: flex;
+    margin-left: 550px;
+    margin-top: -80px;
+    position: absolute;
+    font-size: 50px;
+}
+
+/* edit profile button */
+.profile-edit-btn{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1.5rem;
+    width: 10%;
+    padding: 0.5%;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    right: 16%;
+    top: 14%;
+    margin-right: 5px;
+}
+
+/* user info title*/
+.column-title{
+    margin-top: 50px;
+    margin-left: 90px;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* user info text */
+.column-text{
+    margin-top: 5px;
+    margin-left: 90px;
+    color: white;
+    font-weight: 600;
+}
+
+.form-info{
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+/* ADD FUNCTIONALITY TO
+    - add profile photo into profile
+    - edit profile
+*/
+.post-tab {
+    margin-top: 20px;
+	border-bottom: 40px solid #6b913f;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 25vh;
+    margin-left: 12px;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.post-card{
+    background-color: #938863;
+    border-color: #d8d293;
+    border-radius: 12px;
+    border-width: 8px;
+    border-style: solid;
+    width: 75vh;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10vh;
+}
+
+.post-body{
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    line-height: 20px;
+    font-size: 2vh;
+    overflow-wrap: break-word;
+}
+
+.post-media{
+    width: 100%;
+    height: auto;
+}
+
+.post-status{
+    display: flex;
+    margin: 8px;
+}
+
+.gem-img{
+    margin-left: 8px;
+    height: 3vh;
+    width: auto;
+    cursor: pointer;
+}
+
+.gem-img:hover{
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(0 0 6px rgb(113, 255, 56));
+    filter: drop-shadow(0 0 6px rgb(113, 255, 56));
+}
+
+.gem-img:active{
+    transform: scale(1);
+}
+
+.post-gem-count{
+    margin-left: 8px;
+    font-size: 2vh;
+}
+
+.post-time-submitted{
+    margin-left: auto;
+    margin-right: 8px;
+    font-size: 2vh;
+}
+
+.comment-container{
+    padding: 12px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
