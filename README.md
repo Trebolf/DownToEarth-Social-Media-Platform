@@ -2,6 +2,7 @@
 
 ## Executive Summary
 Design and implement a simple social network that handles multimedia consuming S3.
+</br>
 Our design: Inspired by the Earth Kingdom from the Avatar: The Last Airbender series.
 
 Homepage:
