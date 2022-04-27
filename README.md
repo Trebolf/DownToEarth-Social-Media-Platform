@@ -11,6 +11,11 @@ Homepage:
 Post cards:
 <img src="https://i.imgur.com/Qz94ryB.png">
 
+Technologies Used:
+Java 11
+Spring Boot 2.6.6
+Angular 13.3.0
+
 Features include:
 + Registering as a user.
 + Logging in / logging out.
